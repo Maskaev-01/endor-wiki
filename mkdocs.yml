@@ -1,5 +1,6 @@
 site_name: Эндор
 site_description: Энциклопедия мира Эндор
+site_url: https://maskaev-01.github.io/endor-wiki/
 docs_dir: content
 
 theme:
