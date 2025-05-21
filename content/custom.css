@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Philosopher:wght@400;700&display=swap');
+
+/* Восточный орнамент для хедера через псевдоэлемент */
+.md-header::before {
+  content: "";
+  display: block;
+  width: 100vw;
+  height: 48px; /* Можно увеличить/уменьшить по вкусу */
+  background-image: url('/ornament.jpg');
+  background-repeat: repeat-x;
+  background-size: auto 48px;
+  background-position: bottom left;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 2000;
+  pointer-events: none;
+  transform: rotate(0deg); /* Если нужно повернуть, используйте rotate(-90deg) и скорректируйте size */
+}
+
+/* Увеличиваем высоту header, чтобы орнамент не перекрывал меню */
+.md-header {
+  min-height: 96px !important;
+  padding-top: 48px !important;
+  box-sizing: border-box;
+}
+
+.md-header__inner {
+  margin-top: 0 !important;
+}
+
+body, h1, h2, h3, h4, h5, h6, .md-nav__title, .md-nav__link, .md-typeset, .md-content, .md-sidebar, .md-footer {
+  font-family: 'Philosopher', serif !important;
+}
+
+/* Цвета для светлой темы */
+[data-md-color-scheme="default"] {
+  --md-primary-fg-color: #b8860b;
+  --md-primary-bg-color: #fff8e1;
+  --md-accent-fg-color: #645123;
+  --md-default-bg-color: #fff8e1;
+}
+
+/* Цвета для тёмной темы */
+[data-md-color-scheme="slate"] {
+  --md-primary-fg-color: #d87707;
+  --md-primary-bg-color: #7b2323;
+  --md-accent-fg-color: #ffe082;
+  --md-default-bg-color: #2a1818;
+  background: #2a1818 !important;
+}
+
+/* Принудительно перекрашиваем верхнюю панель */
+.md-header, [data-md-color-scheme="slate"] .md-header {
+  background: var(--md-primary-bg-color) !important;
+  color: var(--md-primary-fg-color) !important;
+  position: relative;
+  z-index: 1001;
+}
+
+/* Цвет ссылок и акцентов */
+a, .md-nav__link--active, .md-typeset a {
+  color: var(--md-accent-fg-color) !important;
+}
+[data-md-color-scheme="slate"] a, [data-md-color-scheme="slate"] .md-nav__link--active, [data-md-color-scheme="slate"] .md-typeset a {
+  color: #a71b1b !important;
+}
+
+/* Восточный шрифт для заголовков и меню */
+h1, h2, h3, h4, h5, h6,
+.md-nav__title, .md-nav__link {
+  font-family: 'Scheherazade New', 'Noto Naskh Arabic', serif;
+  letter-spacing: 0.5px;
+}
+
+/* Восточная декоративная рамка для легенд */
+.md-typeset .admonition.legend, .md-typeset details.legend {
+  border: 3px double #b8860b;
+  background: #fff8e1 url('https://www.toptal.com/designers/subtlepatterns/patterns/persian.png');
+  background-size: 120px;
+  color: #7b2323;
+  font-style: italic;
+  box-shadow: 0 0 8px #b8860b44;
+}
+.md-typeset .admonition.legend > .admonition-title,
+.md-typeset details.legend > summary {
+  color: #b8860b;
+  font-weight: bold;
+  font-family: 'Philosopher', serif;
+  letter-spacing: 1px;
+}
+
+/* Восточная рамка для цитат */
+.md-typeset .admonition.citat, .md-typeset details.citat {
+  border: 2px solid #d87707;
+  background: #fff8e1;
+  color: #7b2323;
+  font-family: 'Philosopher', serif;
+  font-style: italic;
+  box-shadow: 0 0 6px #d8770744;
+}
+.md-typeset .admonition.citat > .admonition-title,
+.md-typeset details.citat > summary {
+  color: #d87707;
+  font-weight: bold;
+  font-family: 'Philosopher', serif;
+}

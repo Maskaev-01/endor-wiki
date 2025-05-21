@@ -1,0 +1,25 @@
+# created by virtualenv automatically
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pdb
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+*.log
+
+# Virtualenv
+venv/
+env/
+ENV/
+.venv/
+Lib/
+Scripts/
+pyvenv.cfg
+
+# MkDocs build
+site/
