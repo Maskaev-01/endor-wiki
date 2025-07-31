@@ -1,0 +1,79 @@
+site_name: Эндор
+site_description: Энциклопедия мира Эндор
+docs_dir: content
+
+theme:
+  name: material
+  language: ru
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - search.highlight
+    - search.share
+    - search.suggest
+  palette:
+    - scheme: default
+      primary: amber
+      accent: amber
+      toggle:
+        icon: material/brightness-7
+        name: Переключить на тёмную тему
+    - scheme: slate
+      primary: '#7b2323'
+      accent: '#ffe082'
+      toggle:
+        icon: material/brightness-4
+        name: Переключить на светлую тему
+  custom_dir: content
+extra_css:
+  - custom.css
+
+markdown_extensions:
+  - pymdownx.highlight
+  - pymdownx.superfences
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.tabbed
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - admonition
+  - footnotes
+  - toc:
+      permalink: true
+
+plugins:
+  - search
+  - tags
+
+nav:
+  - Главная: index.md
+  - Галерея: gallery.md
+  - Пантеоны:
+    - Обзор: pantheons.md
+    - Солнца и Луны:
+      - Обзор: sun-and-moon.md
+      - Рей'мир: rey-mir.md
+      - Ману: manu.md
+      - Ктула: ktula.md
+      - Дейя: deya.md
+      - Тусус: tusus.md
+      - Ула: ula.md
+      - Двое неизвестных: unknown-two.md
+    - Сатхияры:
+      - Обзор: sathiyars.md
+      - Зарлик: zarlic.md
+      - Зугрул: zugrul.md
+      - Чоку: choku.md
+    - Дочери ужаса: daughters-of-horror.md
+    - Улунгуры: ulungurs.md
+    - Звёзды: stars.md
+    - Пантеон Кочевников: nomad-pantheon.md
+    - Белая Вера: white-faith.md
+    - Неизвестные боги: unknown-gods.md
+  - Мир:
+    - Календарь ханидов: calendar.md
+    - Осколки: shards.md
+    - Флора: flora.md
+    - Фауна: fauna.md 

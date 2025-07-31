@@ -1,0 +1,33 @@
+# created by virtualenv automatically
+Lib/
+Scripts/
+
+# Deployment files
+site_build/
+endore_site.tar.gz
+endore_site.zip
+*.log
+
+# IDE files
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.temp
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
